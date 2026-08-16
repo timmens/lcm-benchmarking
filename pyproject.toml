@@ -1,0 +1,22 @@
+[project]
+name = "lcm-benchmarking"
+version = "0.1.0"
+description = "Benchmarks for PyLCM's split-regime runtime predictions."
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = []
+
+[[project.authors]]
+name = "Tim Mensinger"
+email = "mensingertim@gmail.com"
+
+[tool.pixi.workspace]
+channels = ["conda-forge"]
+platforms = ["osx-arm64", "linux-64"]
+
+[tool.pixi.dependencies]
+python = "~=3.14.0"
+
+[tool.pixi.pypi-dependencies]
+pylcm = { git = "https://github.com/OpenSourceEconomics/pylcm.git", branch = "main" }
+dags = { git = "https://github.com/OpenSourceEconomics/dags.git", branch = "main" }
